@@ -37,14 +37,17 @@
     "prettier:check": "prettier --check apps/**/*.{js,json}",
     "prettier:write": "prettier --write apps/**/*.{js,json}",
     "local": "NODE_ENV=development npm run app",
+    "dev": "NODE_ENV=development npm run app",
     "local:win": "set NODE_ENV=development&&npm run app",
     "test": "NODE_ENV=development node --test --test-only",
     "test:win": "set NODE_ENV=development&&node --test --test-only",
     "test:env:win": "set EDITOR=vim && echo $EDITOR",
     "test:e2e": "start-server-and-test start http://localhost:8080 test",
-    "update-commit-hash": "git rev-parse --verify --short HEAD > commit-hash"
+    "update-commit-hash": "git rev-parse --verify --short HEAD > commit-hash",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/t4t": "*",
     "@es-labs/esm": "^0.0.32",
     "@es-labs/node": "^0.0.47",
     "esm": "^3.2.25",

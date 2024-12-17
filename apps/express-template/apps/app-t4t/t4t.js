@@ -14,10 +14,15 @@ const {
   TABLE_USER_ID_KEY, TABLE_USER_ROLE_KEY, TABLE_ORG_ID_KEY
 } = process.env
 
+// const {
+//   noAuthFunc, isInvalidInput, processJson, roleOperationMatch, mapRelation, formUniqueKey, kvDb2Col, setAuditData
+// } = require('./t4t-utils.js')
 const {
   noAuthFunc, isInvalidInput, processJson, roleOperationMatch, mapRelation, formUniqueKey, kvDb2Col, setAuditData
-} = require('./t4t-utils.js')
+} = require('@repo/t4t/utils')
 const path = require('path')
+
+console.log("roleOperationMatch", roleOperationMatch)
 
 const custom = TABLE_CUSTOM_PATH ? require(TABLE_CUSTOM_PATH) : { }
 const uploadMemory =  {

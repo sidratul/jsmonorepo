@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "vite build --config src/apps/vite.config.js",
-    "dev": "vite --config src/apps/vite.config.js --mode dev",
+    "dev-mode": "vite --config src/apps/vite.config.js --mode dev",
+    "dev": "vite --config src/apps/vite.config.js",
     "local": "vite --config src/apps/vite.config.js",
     "local:reload": "vite --force --config src/apps/vite.config.js",
     "local:mocked": "vite --config src/apps/vite.config.js --mode mocked",
@@ -20,7 +21,8 @@
     "lint:fix": "eslint . --ext .js,.vue --fix",
     "prettier:check": "prettier --check **/*.{js,json,vue}",
     "prettier:write": "prettier --write **/*.{js,json,vue}",
-    "test:e2e": "echo \"Remember to run frontend and backend before test...\" && playwright test"
+    "test:e2e": "echo \"Remember to run frontend and backend before test...\" && playwright test",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
