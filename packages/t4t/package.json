@@ -1,0 +1,12 @@
+{
+  "name": "@repo/t4t",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "private": true,
+  "exports": {
+    "./utils": "./t4t-utils.js"
+  },
+  "scripts": {
+    "check-types": "tsc --noEmit"
+  }
+}
